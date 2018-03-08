@@ -13,7 +13,7 @@ class CardForm extends React.Component {
     this.props.addCardFunction(this.state);
     this.setState({ front: '', back: '' })
   }
- 
+
   render() {
     const { addCardFunction } = this.props;
     const { front, back } = this.state;
@@ -21,7 +21,8 @@ class CardForm extends React.Component {
       <Form onSubmit={this.handleSubmit}>
         <Form.Group>
 
-          <Form.Input  name='front' 
+          <Form.Input  
+            name='front' 
             value={front} 
             onChange={this.handleChange} 
             label='Front' 
@@ -32,7 +33,7 @@ class CardForm extends React.Component {
             name='back' 
             value={back} 
             onChange={this.handleChange} 
-            label='back' 
+            label='Back' 
             placeholder='Enter Description' 
             />
 
